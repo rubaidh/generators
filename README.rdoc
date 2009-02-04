@@ -1,13 +1,8 @@
-Generators
-==========
+= Rubaidh Generators
 
-Introduction goes here.
+Rails ships with its own generators for creating models, controllers and
+complete scaffolds. RSpec ships with its own take on these generators. We ship
+with yet another slightly different take on the generators, suited to
+Rubaidh's tastes.
 
-
-Example
-=======
-
-Example goes here.
-
-
-Copyright (c) 2009 [name of plugin creator], released under the MIT license
+Copyright (c) 2009 Rubaidh Ltd, released under the MIT license.
