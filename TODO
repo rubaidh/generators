@@ -1,0 +1,6 @@
+= To do
+
+* Fix the scaffold to successfully create singleton resources too.
+
+* Create a layout generator which creates a sensible default layout using YUI
+  grids.
