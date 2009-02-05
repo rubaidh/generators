@@ -1,0 +1,23 @@
+Description:
+    Stubs out a new helper. Pass the helper name, either
+    CamelCased or under_scored.
+
+    To create a helper within a module, specify the helper name as a
+    path like 'parent_module/helper_name'.
+
+    This generates a helper class in app/helpers and a helper spec
+    in spec/helpers.
+
+Example:
+    `./script/generate helper CreditCard`
+
+    Credit card helper.
+        Helper:     app/helpers/credit_card_helper.rb
+        Spec:       spec/helpers/credit_card_helper_spec.rb
+
+Modules Example:
+    `./script/generate helper 'admin/credit_card'`
+
+    Credit card admin helper.
+        Helper:     app/helpers/admin/credit_card_helper.rb
+        Spec:       spec/helpers/admin/credit_card_helper_spec.rb
