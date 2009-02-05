@@ -4,7 +4,7 @@
 # of the "<%= project_name %>" project.
 #
 #--
-# Copyright (c) 2006-<%= Time.now.year %> Rubaidh Ltd.  All rights reserved. 
+# Copyright (c) 2006-<%= Time.now.year %> Rubaidh Ltd.  All rights reserved.
 # See LICENSE in the top level source code folder for permissions.
 #++
 
