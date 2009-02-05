@@ -19,7 +19,7 @@ class RubaidhControllerGenerator < RubaidhNamedBase
                            class_path,
                            "#{file_name}_controller.rb")
 
-      m.template 'controller:helper.rb',
+      m.template 'rubaidh_helper:helper.rb',
                  File.join('app/helpers',
                            class_path,
                            "#{file_name}_helper.rb")
@@ -29,7 +29,7 @@ class RubaidhControllerGenerator < RubaidhNamedBase
                            class_path,
                            "#{file_name}_controller_spec.rb")
 
-      m.template 'helper_spec.rb',
+      m.template 'rubaidh_helper:helper_spec.rb',
                  File.join('spec/helpers',
                            class_path,
                            "#{file_name}_helper_spec.rb")
