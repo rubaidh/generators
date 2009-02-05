@@ -4,3 +4,10 @@
 
 * Create a layout generator which creates a sensible default layout using YUI
   grids.
+
+* Convert into a gem.
+
+* Figure out how to do automated testing of generators.
+
+* Figure a way to keep track of changes to the Rails (and RSpec) generators
+  used as inspiration so we can merge in changes.
