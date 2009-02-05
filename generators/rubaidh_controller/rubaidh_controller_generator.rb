@@ -42,4 +42,9 @@ class RubaidhControllerGenerator < RubaidhNamedBase
       end
     end
   end
+
+  protected
+  def banner
+    "Usage: #{$0} #{spec.name} ControllerName [action]..."
+  end
 end
