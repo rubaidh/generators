@@ -21,8 +21,8 @@ describe <%= controller_class_name %>Controller do
       <%= class_name %>.stub!(:find).and_return(@<%= table_name %>)
     end
 
-    def do_get(params = {})
-      get :index, params
+    def do_get
+      get :index
     end
 
     it "should be successful" do
@@ -51,8 +51,8 @@ describe <%= controller_class_name %>Controller do
       <%= class_name %>.stub!(:find).and_return(mock_<%= file_name %>)
     end
 
-    def do_get(params = {})
-      get :show, { :id => "37" }.merge(params)
+    def do_get
+      get :show, :id => "37"
     end
 
     it "should be successful" do
@@ -81,8 +81,8 @@ describe <%= controller_class_name %>Controller do
       <%= class_name %>.stub!(:new).and_return(mock_<%= file_name %>)
     end
 
-    def do_get(params = {})
-      get :new, params
+    def do_get
+      get :new
     end
 
     it "should ask the model for a new <%= file_name %>" do
@@ -91,7 +91,7 @@ describe <%= controller_class_name %>Controller do
     end
 
     it "should expose a new <%= file_name %> as @<%= file_name %>" do
-      get :new
+      do_get
       assigns[:<%= file_name %>].should equal(mock_<%= file_name %>)
     end
   end
@@ -101,8 +101,8 @@ describe <%= controller_class_name %>Controller do
       <%= class_name %>.stub!(:find).and_return(mock_<%= file_name %>)
     end
 
-    def do_get(params = {})
-      get :edit, { :id => "37" }.merge(params)
+    def do_get
+      get :edit, :id => "37"
     end
 
     it "should be successful" do
@@ -132,8 +132,8 @@ describe <%= controller_class_name %>Controller do
       mock_<%= file_name %>.stub!(:save)
     end
 
-    def do_post(params = {})
-      post :create, { :<%= file_name %> => { "dummy" => "parameters" } }.merge(params)
+    def do_post
+      post :create, :<%= file_name %> => { "dummy" => "parameters" }
     end
 
     it "should build a new <%= file_name %> with the supplied parameters" do
@@ -169,7 +169,7 @@ describe <%= controller_class_name %>Controller do
 
       it "should re-render the 'new' template" do
         do_post
-        response.should render_template('new')
+        response.should render_template(:new)
       end
     end
   end
@@ -180,8 +180,8 @@ describe <%= controller_class_name %>Controller do
       mock_<%= file_name %>.stub!(:update_attributes)
     end
 
-    def do_put(params = {})
-      put :update, { :id => "37", :<%= file_name %> => { "dummy" => "parameters" } }.merge(params)
+    def do_put
+      put :update, :id => "37", :<%= file_name %> => { "dummy" => "parameters" }
     end
 
     it "should query the model for the requested <%= file_name %>" do
@@ -217,7 +217,7 @@ describe <%= controller_class_name %>Controller do
 
       it "should re-render the 'edit' template" do
         do_put
-        response.should render_template('edit')
+        response.should render_template(:edit)
       end
     end
 
@@ -243,7 +243,7 @@ describe <%= controller_class_name %>Controller do
       do_delete
     end
 
-    it "should redirect to the <%= table_name %> list" do
+    it "should redirect to the <%= table_name %> index action" do
       do_delete
       response.should redirect_to(<%= table_name %>_url)
     end
