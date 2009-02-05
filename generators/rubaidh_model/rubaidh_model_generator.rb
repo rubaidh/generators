@@ -19,4 +19,9 @@ class RubaidhModelGenerator < RubaidhNamedBase
       }, :migration_file_name => "create_#{file_path.gsub(/\//, '_').pluralize}"
     end
   end
+
+  protected
+  def banner
+    "Usage: #{$0} #{spec.name} ModelName [field:type] ..."
+  end
 end
