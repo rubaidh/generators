@@ -1,0 +1,11 @@
+#!/usr/bin/env ruby
+
+require 'rubygems'
+gem 'rails'
+
+require 'rails/version'
+require 'rails_generator'
+require 'rails_generator/scripts/generate'
+
+Rails::Generator::Base.use_application_sources!
+Rails::Generator::Scripts::Generate.new.run(["-d", "mysql", "-m", File.join(File.dirname(__FILE__), '..', 'templates', 'rubaidh.rb')] + ARGV, :generator => 'app')

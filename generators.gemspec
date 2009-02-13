@@ -42,4 +42,8 @@ spec = Gem::Specification.new do |s|
   )
 
   s.add_dependency 'rails', '>=2.3.0'
+
+  s.bindir = "bin"
+  s.executables = ["rubaidh_rails"]
+  s.default_executable = "rubaidh_rails"
 end
