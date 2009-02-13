@@ -5,4 +5,40 @@ complete scaffolds. RSpec ships with its own take on these generators. We ship
 with yet another slightly different take on the generators, suited to
 Rubaidh's tastes.
 
+== Application Generator
+
+The gem ships with a program called +rubaidh_rails+ which generates a Rails
+application and applies the Rubaidh template to it. In short, this will:
+
+* initialize a local Git repository, ignoring the appropriate things and
+  saving the log directory but not its contents;
+
+* install RSpec, RSpec's Rails support, Cucumber, Remarkable and object_daddy
+  for testing support;
+
+* install and enable hoptoad for watching errors in production; and
+
+* create and migrate all the appropriate databases.
+
+So, for every new application, it'll save us a good hour of boring fiddling.
+:-)
+
+== Component Generators
+
+We currently ship with 4 generators:
+
+* rubaidh_model which generates a model, specification and exemplar.
+
+* rubaidh_controller which generates a controller and specification.
+
+* rubaidh_helper which generates a helper and its specification.
+
+* rubaidh_scaffold which generates the full shebang for a CRUD-operated
+  RESTful resource.
+
+Where possible generators are built in terms of other generators (so the
+scaffold calls on rubaidh_model to generate the model).
+
+== License
+
 Copyright (c) 2009 Rubaidh Ltd, released under the MIT license.
