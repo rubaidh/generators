@@ -25,6 +25,7 @@ spec = Gem::Specification.new do |s|
     generators/rubaidh_model/rubaidh_model_generator.rb
     generators/rubaidh_model/templates/migration.rb
     generators/rubaidh_model/templates/model.rb
+    generators/rubaidh_model/templates/model_exemplar.rb
     generators/rubaidh_model/templates/model_spec.rb
     generators/rubaidh_model/USAGE
     generators/rubaidh_named_base.rb
