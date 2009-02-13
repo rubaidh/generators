@@ -1,5 +1,11 @@
-Change Log
+= Change Log
 
-= Version 1.0.0
+== Version 1.0.1
+
+* Modify the model generator to generate an object_daddy examplar too.
+
+* Fix a regression that was causing generated routing spec failure.
+
+== Version 1.0.0
 
 * Initial release.
