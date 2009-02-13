@@ -20,6 +20,10 @@ describe <%= controller_class_name %>Controller do
       route_for(:controller => "<%= table_name %>", :action => "new").should == "/<%= table_name %>/new"
     end
 
+    it "should map #create" do
+      route_for(:controller => "<%= table_name %>", :action => "create").should == { :path => "/<%= table_name %>", :method => :post }
+    end
+
     it "should map #show" do
       route_for(:controller => "<%= table_name %>", :action => "show", :id => 1).should == "/<%= table_name %>/1"
     end
