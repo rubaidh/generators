@@ -1,5 +1,9 @@
 = Change Log
 
+== Version 1.0.2
+
+* Enhance (ie write) documentation.
+
 == Version 1.0.1
 
 * Modify the model generator to generate an object_daddy examplar too.

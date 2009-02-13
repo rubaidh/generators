@@ -1,6 +1,6 @@
 spec = Gem::Specification.new do |s|
   s.name = 'generators'
-  s.version = '1.0.1'
+  s.version = '1.0.2'
   s.date = '2009-02-13'
   s.authors = ['Graeme Mathieson', 'Rubaidh Ltd']
   s.email = 'support@rubaidh.com'
@@ -11,7 +11,7 @@ spec = Gem::Specification.new do |s|
   s.description = 'Generators for building Ruby on Rails projects the Rubaidh Way'
 
   s.files = %w(
-    .gitignore MIT-LICENSE Rakefile README.rdoc TODO generators.gemspec
+    .gitignore MIT-LICENSE Rakefile README.rdoc CHANGELOG TODO generators.gemspec
     bin/rubaidh_rails
     generators/rubaidh_controller/rubaidh_controller_generator.rb
     generators/rubaidh_controller/templates/controller.rb
@@ -49,4 +49,6 @@ spec = Gem::Specification.new do |s|
   s.bindir = "bin"
   s.executables = ["rubaidh_rails"]
   s.default_executable = "rubaidh_rails"
+
+  s.has_rdoc = true
 end
