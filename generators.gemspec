@@ -40,4 +40,6 @@ spec = Gem::Specification.new do |s|
     generators/rubaidh_scaffold/templates/view_show.html.erb
     generators/rubaidh_scaffold/USAGE
   )
+
+  s.add_dependency 'rails', '>=2.3.0'
 end
