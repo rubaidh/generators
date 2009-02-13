@@ -12,6 +12,7 @@ spec = Gem::Specification.new do |s|
 
   s.files = %w(
     .gitignore MIT-LICENSE Rakefile README.rdoc TODO generators.gemspec
+    bin/rubaidh_rails
     generators/rubaidh_controller/rubaidh_controller_generator.rb
     generators/rubaidh_controller/templates/controller.rb
     generators/rubaidh_controller/templates/controller_spec.rb
@@ -39,6 +40,7 @@ spec = Gem::Specification.new do |s|
     generators/rubaidh_scaffold/templates/view_new.html.erb
     generators/rubaidh_scaffold/templates/view_show.html.erb
     generators/rubaidh_scaffold/USAGE
+    templates/rubaidh.rb
   )
 
   s.add_dependency 'rails', '>=2.3.0'
