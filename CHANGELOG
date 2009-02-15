@@ -1,5 +1,10 @@
 = Change Log
 
+== HEAD
+
+* Insert cucumber into the generated application, not a duplicate copy of
+  webrat.
+
 == Version 1.0.3
 
 * The rubaidh_rails application generator now pulls in edge Rails as a
