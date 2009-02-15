@@ -24,6 +24,15 @@ file "log/.keep", ""
 git :add => '.'
 git :commit =>  "-m 'Initial commit of application skeleton.'"
 
+# Pull Rails in as a submodule
+git :submodule => 'add git://github.com/rails/rails.git vendor/rails'
+git :commit => '-m "Pull in Rails as a git submodule."'
+
+# Update against the latest edge Rails
+rake 'rails:update'
+git :add => '.'
+git :commit => '-m "Update Rails skeleton code to latest from edge Rails."'
+
 # Pull in all our favourite testing tools.
 plugin 'remarkable',   :git => 'git://github.com/carlosbrando/remarkable.git',  :submodule => true
 plugin 'rspec',        :git => 'git://github.com/dchelimsky/rspec.git',         :submodule => true
