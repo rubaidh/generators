@@ -1,6 +1,6 @@
 = Change Log
 
-== HEAD
+== Version 1.0.4
 
 * Insert cucumber into the generated application, not a duplicate copy of
   webrat.
