@@ -50,5 +50,5 @@ spec = Gem::Specification.new do |s|
   s.executables = ["rubaidh_rails"]
   s.default_executable = "rubaidh_rails"
 
-  s.has_rdoc = true
+  s.has_rdoc = false
 end
