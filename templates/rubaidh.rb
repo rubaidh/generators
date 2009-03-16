@@ -46,7 +46,7 @@ plugin 'object_daddy', :git => 'git://github.com/flogic/object_daddy.git',      
 generate 'rspec'
 generate 'cucumber'
 git :add => '.'
-git :commit => "-m 'Pull in submodules, and install support, for RSpec/Cucumber testing tools.'"
+git :commit => "-m 'Pull in submodules, and install support, for RSpec testing tools.'"
 
 # Remave the existing Test::Unit test suite code.
 git :rm => "-rf test"
