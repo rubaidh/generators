@@ -45,6 +45,7 @@ spec = Gem::Specification.new do |s|
   )
 
   s.add_dependency 'rails', '>=2.3.0'
+  s.add_dependency 'grit', '>=1.0.1'
 
   s.bindir = "bin"
   s.executables = ["rubaidh_rails"]
