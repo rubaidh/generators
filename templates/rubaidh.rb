@@ -38,7 +38,7 @@ git :add => '.'
 git :commit => '-m "Update Rails skeleton code to latest from edge Rails."'
 
 # Pull in all our favourite testing tools.
-plugin 'remarkable',   :git => 'git://github.com/carlosbrando/remarkable.git',  :submodule => true
+plugin 'shoulda',      :git => 'git://github.com/thoughtbot/shoulda.git'        :submodule => true
 plugin 'rspec',        :git => 'git://github.com/dchelimsky/rspec.git',         :submodule => true
 plugin 'rspec-rails',  :git => 'git://github.com/dchelimsky/rspec-rails.git',   :submodule => true
 plugin 'webrat',       :git => 'git://github.com/brynary/webrat.git',           :submodule => true
