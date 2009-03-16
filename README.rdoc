@@ -13,10 +13,10 @@ application and applies the Rubaidh template to it. In short, this will:
 * initialize a local Git repository, ignoring the appropriate things and
   saving the log directory but not its contents;
 
-* install RSpec, RSpec's Rails support, Cucumber, Remarkable and object_daddy
+* install RSpec, RSpec's Rails support, Shoulda and object_daddy
   for testing support;
 
-* install and enable hoptoad for watching errors in production; and
+* install and enable GetExceptional for watching errors in production; and
 
 * create and migrate all the appropriate databases.
 

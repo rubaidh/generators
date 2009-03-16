@@ -1,5 +1,17 @@
 = Change Log
 
+== Version 1.0.5
+
+* Add .DS_Store to .gitignore
+
+* Remove cucumber being installed as a submoduled plugin so we don't encounter issues with the gem path
+
+* Added dependancy for grit gem
+
+* Switched out Hoptoad for GetExceptional
+
+* Switched out Remarkable for Shoulda
+
 == Version 1.0.4
 
 * Insert cucumber into the generated application, not a duplicate copy of
