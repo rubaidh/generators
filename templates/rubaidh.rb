@@ -16,6 +16,10 @@ file ".gitignore", <<-GITIGNORE
 
 # RSpec test coverage
 /coverage
+
+# Pesky .DS_Store files from Mac OS X
+.DS_Store
+
 GITIGNORE
 
 # Don't delete the log folder, thanks, git.
