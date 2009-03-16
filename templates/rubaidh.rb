@@ -38,16 +38,15 @@ git :add => '.'
 git :commit => '-m "Update Rails skeleton code to latest from edge Rails."'
 
 # Pull in all our favourite testing tools.
-plugin 'remarkable',   :git => 'git://github.com/carlosbrando/remarkable.git',  :submodule => true
+plugin 'shoulda',      :git => 'git://github.com/thoughtbot/shoulda.git'        :submodule => true
 plugin 'rspec',        :git => 'git://github.com/dchelimsky/rspec.git',         :submodule => true
 plugin 'rspec-rails',  :git => 'git://github.com/dchelimsky/rspec-rails.git',   :submodule => true
 plugin 'webrat',       :git => 'git://github.com/brynary/webrat.git',           :submodule => true
-plugin 'cucumber',     :git => 'git://github.com/aslakhellesoy/cucumber.git',   :submodule => true
 plugin 'object_daddy', :git => 'git://github.com/flogic/object_daddy.git',      :submodule => true
 generate 'rspec'
 generate 'cucumber'
 git :add => '.'
-git :commit => "-m 'Pull in submodules, and install support, for RSpec/Cucumber testing tools.'"
+git :commit => "-m 'Pull in submodules, and install support, for RSpec testing tools.'"
 
 # Remave the existing Test::Unit test suite code.
 git :rm => "-rf test"
@@ -60,24 +59,45 @@ rake "db:migrate"
 git :add => "db/schema.rb"
 git :commit => "-m 'Create a blank database schema.'"
 
-# Hoptoad Notifier for notification of production errors
-plugin 'hoptoad_notifier', :git => 'git://github.com/thoughtbot/hoptoad_notifier.git', :submodule => true
-file 'app/controllers/application_controller.rb', <<-RUBY
-class ApplicationController < ActionController::Base
-  helper :all
-  protect_from_forgery
-  filter_parameter_logging :password
+# GetExceptional Notifier for notification of production errors
+plugin 'exceptional', :git => 'git://github.com/contrast/exceptional.git', :submodule => true
+file 'config/exceptional.yml', <<-EXCEPTIONAL
+# here are the settings that are common to all environments
+common: &default_settings
+  # You must specify your Exceptional API key here.
+  api-key: API_KEY_GOES_HERE
+  # Exceptional creates a separate log file from your application's logs
+  # available levels are debug, info, warn, error, fatal
+  log-level: info
+  # The exceptional agent sends data via regular http by default
+  # Setting this value to true will send data over SSL, increasing security
+  # There will be an additional CPU overhead in encrypting the data, however
+  # as long as your deployment environment is not Passenger (mod_rails), this
+  # happens in the background so as not to incur a page wait for your users.
+  ssl: false
 
-  include HoptoadNotifier::Catcher
-end
-RUBY
+development:
+  <<: *default_settings
+  # Normally no reason to collect exceptions in development
+  # NOTE: for trial purposes you may want to enable exceptional in development
+  enabled: false
 
-initializer 'hoptoad.rb', <<-RUBY
-HoptoadNotifier.configure do |config|
-  # FIXME Insert Hoptoad API key.
-  config.api_key = 'Insert API Key here'
-end
-RUBY
+test:
+  <<: *default_settings
+  # No reason to collect exceptions when running tests by default
+  enabled: false
+
+production:
+  <<: *default_settings
+  enabled: true
+
+staging:
+  # It's common development practice to have a staging environment that closely
+  # mirrors production, by default catch errors in this environment too.
+  <<: *default_settings
+  enabled: true
+
+EXCEPTIONAL
 
 git :add => '.'
 git :commit => "-m 'Incorporate Hoptoad exception notification support.'"
