@@ -59,8 +59,8 @@ rake "db:migrate"
 git :add => "db/schema.rb"
 git :commit => "-m 'Create a blank database schema.'"
 
-# Hoptoad Notifier for notification of production errors
-plugin 'hoptoad_notifier', :git => 'git://github.com/thoughtbot/hoptoad_notifier.git', :submodule => true
+# GetExceptional Notifier for notification of production errors
+plugin 'exceptional', :git => 'git://github.com/contrast/exceptional.git', :submodule => true
 file 'app/controllers/application_controller.rb', <<-RUBY
 class ApplicationController < ActionController::Base
   helper :all
