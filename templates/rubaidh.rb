@@ -42,7 +42,6 @@ plugin 'remarkable',   :git => 'git://github.com/carlosbrando/remarkable.git',  
 plugin 'rspec',        :git => 'git://github.com/dchelimsky/rspec.git',         :submodule => true
 plugin 'rspec-rails',  :git => 'git://github.com/dchelimsky/rspec-rails.git',   :submodule => true
 plugin 'webrat',       :git => 'git://github.com/brynary/webrat.git',           :submodule => true
-plugin 'cucumber',     :git => 'git://github.com/aslakhellesoy/cucumber.git',   :submodule => true
 plugin 'object_daddy', :git => 'git://github.com/flogic/object_daddy.git',      :submodule => true
 generate 'rspec'
 generate 'cucumber'
