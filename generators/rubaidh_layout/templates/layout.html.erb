@@ -3,26 +3,26 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <title>title</title>
-  <%= stylesheet_link_tag 'base', 'style' %>
+  <%%= stylesheet_link_tag 'base', 'style' %>
 </head>
 <body>
   <div id="container">
     <div id="header">
-      <h1><a href="/"><%= File.dirname(RAILS_ROOT) %></a></h1>
+      <h1><a href="/"><%%= File.dirname(RAILS_ROOT) %></a></h1>
     </div>    
     <div id="wrapper">
       <div id="main">
-        <% unless flash.empty? %>
+        <%% unless flash.empty? %>
               <div class="flash">
-                <% flash.each do |sev, message| %>
-                  <%= content_tag :div, message, :class => sev %>
-                <% end %>
+                <%% flash.each do |sev, message| %>
+                  <%%= content_tag :div, message, :class => sev %>
+                <%% end %>
               </div>
-        <% end %>
-        <%= yield %>
+        <%% end %>
+        <%%= yield %>
       </div>
       <div id="sidebar">
-        <%= yield :sidebar %>
+        <%%= yield :sidebar %>
       </div>
       <div class="clear"></div>      
     </div> 
