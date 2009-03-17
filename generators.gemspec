@@ -1,7 +1,7 @@
 spec = Gem::Specification.new do |s|
   s.name = 'generators'
-  s.version = '1.0.5'
-  s.date = '2009-03-16'
+  s.version = '1.0.6'
+  s.date = '2009-03-17'
   s.authors = ['Graeme Mathieson', 'Mark Connell' 'Rubaidh Ltd']
   s.email = 'support@rubaidh.com'
   s.rubyforge_project = 'rubaidh'
