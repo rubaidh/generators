@@ -1,5 +1,11 @@
 = Change Log
 
+== Version 1.0.6
+
+* Add Web App Theme to the application (script/generate rubaidh_layout)
+
+* Fix error introduced in last version of a missing comma in a command to add a submodule
+
 == Version 1.0.5
 
 * Add .DS_Store to .gitignore

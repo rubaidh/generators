@@ -1,2 +1,17 @@
-<h1><%= class_name %>#<%= action %></h1>
-<p>Find me in <%= path %></p>
+<div class="block">
+  <div class="content">
+    <h2 class="title"><%= class_name %>#<%= action %></h2>
+    <div class="inner">
+      <p>Find me in <%= path %></p>
+    </div>
+  </div>
+</div>
+
+<%% content_for :sidebar do %>
+  <div class="block notice">
+    <h4>Sample</h4>
+    <p>
+      This is a sample notice for in the sidebar
+    </p>
+  </div>
+<%% end %>

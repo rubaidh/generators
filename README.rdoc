@@ -36,6 +36,8 @@ We currently ship with 4 generators:
 * rubaidh_scaffold which generates the full shebang for a CRUD-operated
   RESTful resource.
 
+* rubaidh_layout which generates a basic web-app theme
+
 Where possible generators are built in terms of other generators (so the
 scaffold calls on rubaidh_model to generate the model).
 

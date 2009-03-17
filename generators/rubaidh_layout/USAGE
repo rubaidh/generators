@@ -1,0 +1,5 @@
+Description:
+    Generates a basic web application style layout and CSS
+
+Examples:
+    `./script/generate rubaidh_layout`

@@ -1,5 +1,10 @@
-<h1>Listing <%= plural_name.humanize %></h1>
+<div class="block">
+  <div class="content">
+    <h2 class="title">Listing <%= plural_name.humanize %></h2>
+    <div class="inner">
+      <%%= render :partial => @<%= plural_name %>, :layout => '<%= plural_name %>' %>
+      <p><%%= link_to 'New <%= singular_name %>', new_<%= singular_name %>_path %></p>
+    </div>
+  </div>
+</div>
 
-<%%= render :partial => @<%= plural_name %>, :layout => '<%= plural_name %>' %>
-
-<p><%%= link_to 'New <%= singular_name %>', new_<%= singular_name %>_path %></p>
