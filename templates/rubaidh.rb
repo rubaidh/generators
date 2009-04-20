@@ -29,7 +29,8 @@ git :add => '.'
 git :commit =>  "-m 'Initial commit of application skeleton.'"
 
 # Pull Rails in as a submodule
-git :submodule => 'add git://github.com/rails/rails.git vendor/rails -b 2-3-stable'
+git :submodule => 'add git://github.com/rails/rails.git vendor/rails'
+run 'cd vendor/rails && git checkout -b 2-3-stable origin/2-3-stable'
 git :commit => '-m "Pull in Rails as a git submodule and pin to version 2.3 stable."'
 
 # Update against the latest edge Rails
