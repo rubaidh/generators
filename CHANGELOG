@@ -1,5 +1,9 @@
 = Change Log
 
+== Version 1.0.7
+
+* Pin Rails to 2.3 stable to prevent 3.0 stuff causing problems
+
 == Version 1.0.6
 
 * Add Web App Theme to the application (script/generate rubaidh_layout)
